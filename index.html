@@ -1,8 +1,12 @@
-<!DOCTYPE html>
+
+  
+  
+  
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Section Controller â€“ 20 Day Drill</title>
+<title>Section Controller – 20 Day Drill</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body{
@@ -10,27 +14,55 @@ body{
   background:#0b1220;
   color:#e5e7eb;
   margin:0;
-  padding:20px;
 }
-h1{color:#38bdf8;text-align:center}
-.card{
-  background:#020617;
-  border:2px solid #38bdf8;
-  border-radius:14px;
+header{
   padding:16px;
-  max-width:420px;
-  margin:20px auto;
+  text-align:center;
+  border-bottom:2px solid #38bdf8;
+}
+h1{color:#38bdf8;margin:0}
+nav{
+  display:flex;
+  gap:10px;
+  padding:10px;
+  justify-content:center;
+  flex-wrap:wrap;
 }
 button{
-  width:100%;
-  padding:14px;
-  margin:8px 0;
+  padding:10px 14px;
   background:#020617;
   border:2px solid #22c55e;
   border-radius:10px;
   color:#e5e7eb;
-  font-size:16px;
   font-weight:bold;
 }
-button:active{background:#022c22}
-.status{font-size:14
+iframe{
+  width:100%;
+  height:85vh;
+  border:none;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1> Section Controller</h1>
+  <p>20-Day Discipline Drill</p>
+</header>
+
+<nav>
+  <button onclick="loadPage('dashboard.html')"> Dashboard</button>
+  <button onclick="loadPage('days/day1.html')">Day 1</button>
+  <button onclick="loadPage('days/day2.html')">Day 2</button>
+</nav>
+
+<iframe id="viewer"></iframe>
+
+<script>
+function loadPage(path){
+  document.getElementById('viewer').src = path;
+}
+</script>
+
+</body>
+</html>
